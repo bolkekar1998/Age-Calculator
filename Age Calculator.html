@@ -1,0 +1,107 @@
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Age Calculator</title>
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link href="Age%20Calculator_files/css2.css" rel="stylesheet">
+    <link href="Age%20Calculator_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="Age%20Calculator_files/calc.css">
+    <style>
+        .gajanan{
+            margin-top: 6%;
+            margin-left: 40%;
+            font-weight: lighter;
+            
+        }
+        
+        .gajanan1{
+            margin-top: 31%;
+            margin-left: 55%;
+            font-weight:10;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <!--Bootstrap start -->
+    <div class="gajanan" style="color: black;">
+        <h1> <b>My Age Calculator</b> </h1>
+        
+      </div>
+      
+    <!--Bootstrap end -->
+    <div class="container">
+        <div class="inputs-wrapper">
+            <input type="date" id="date-input" value="1999-12-15">
+            <button onclick="ageCalculate()">Calculate</button>
+        </div>
+        <div class="outputs-wrapper">
+            <div>
+                <span id="years">23</span>
+                <p>
+                    Years
+                </p>
+            </div>
+            <div>
+                <span id="months">0</span>
+                <p>
+                   Months
+                </p>
+            </div>
+            <div>
+                <span id="days">3</span>
+                <p>
+                    Days
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="gajanan1" style="color: black;">
+        <h3> <b>...by Gajanan Bolkekar</b> </h3>
+        
+      </div>
+      
+    <script src="Age%20Calculator_files/calc.js"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
